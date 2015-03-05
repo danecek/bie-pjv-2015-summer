@@ -3,23 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package helloworld;
+package rectangles;
 
 /**
  *
  * @author danecek
  */
-public class HelloWorld {
+public class Rectangles {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Hello");
-        System.out.println(Second.max(1, 5));
-        System.out.println('X');
-        System.out.println(true);
-        System.out.println(3.14);
+        Rectangle s1 = new Rectangle(1,1, 3);
+        System.out.println(s1);
+        Rectangle s2 = new Rectangle(3,3, 3);
+        System.out.println(s2);
+        System.out.println(s1.union(s2));
         // TODO code application logic here
     }
     
