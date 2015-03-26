@@ -26,3 +26,5 @@ hs_err_pid*
 /CustomerDAO/dist/
 /MyArraySet/nbproject/private/
 /MyArraySet/build/
+/Storage/nbproject/private/
+/Storage/build/
