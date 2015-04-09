@@ -13,11 +13,15 @@ hs_err_pid*
 /HelloWorld/nbproject/private/
 /HelloWorld/build/
 /HelloWorld/dist/
+/PINumber/nbproject/private/
 /PINumber/build/
+/PINumber/dist/
 /PINumberOOP/nbproject/private/
 /PINumberOOP/build/
+/PINumberOOP/dist/
 /Rectangles/nbproject/private/
 /Rectangles/build/
+/Rectangles/dist/
 /Expressions/nbproject/private/
 /Expressions/build/
 /Expressions/dist/
@@ -26,6 +30,7 @@ hs_err_pid*
 /CustomerDAO/dist/
 /MyArraySet/nbproject/private/
 /MyArraySet/build/
+/MyArraySet/dist/
 /Storage/nbproject/private/
 /Storage/build/
 /Scanners/nbproject/private/
@@ -34,3 +39,6 @@ hs_err_pid*
 /JavFXHW/nbproject/private/
 /JavFXHW/build/
 /JavFXHW/dist/
+/Semaphor/nbproject/private/
+/Semaphor/build/
+/Semaphor/dist/
