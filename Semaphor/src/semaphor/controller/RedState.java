@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package control;
+package semaphor.controller;
 
 import javafx.scene.paint.Color;
 
@@ -13,17 +13,15 @@ import javafx.scene.paint.Color;
  */
 public class RedState extends State {
 
-    private static RedState instance;
+    static RedState instance = new RedState();
 
     public RedState() {
-        super(YellowFromRed.getInstance(), Color.RED);
+        super(Color.RED);
     }
 
-    public static RedState getInstance() {
-        if (instance == null) {
-            instance = new RedState();
-        }
-        return instance;
+    @Override
+    public State getNextState() {
+        return YellowFromRed.instance;
     }
 
 }

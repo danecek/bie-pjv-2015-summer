@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package control;
+package semaphor.controller;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -16,27 +16,22 @@ import javafx.scene.paint.Color;
 public abstract class State {
 
     private final Collection<Color> onColors;
-     State nextState;
 
-    public State(State nextState, Color... onColors) {
+    public State(Color... onColors) {
         this.onColors = Arrays.asList(onColors);
-        this.nextState = nextState;
     }
-    
-
 
     void leave(Controller controller) {
-        controller.setState(nextState);
+        controller.setState(getNextState());
     }
 
     void enter() {
-
     }
 
-    /**
-     * @return the onColors
-     */
     public Collection<Color> getOnColors() {
         return onColors;
     }
+
+
+    public abstract State getNextState();
 }

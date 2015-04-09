@@ -5,17 +5,18 @@
  */
 package semaphor;
 
-import control.Controller;
+import semaphor.controller.Controller;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import view.SemaphorView;
+import semaphor.view.SemaphorView;
 
 /**
  *
@@ -27,7 +28,9 @@ public class Semaphor extends Application {
     public void start(Stage primaryStage) {
         Button btn = new Button();
         
-        Pane root = new FlowPane();
+        VBox root = new VBox();
+        root.setPadding(new Insets(10));
+        root.setSpacing(20);
         SemaphorView sv = new SemaphorView(20, Color.RED, Color.YELLOW, Color.GREEN);
         Controller c = new Controller(sv);
         btn.setText("Next");
@@ -41,7 +44,7 @@ public class Semaphor extends Application {
 
         root.getChildren().addAll(sv, btn);
         
-        Scene scene = new Scene(root, 300, 250);
+        Scene scene = new Scene(root);
         
         primaryStage.setTitle("Semaphor");
         primaryStage.setScene(scene);

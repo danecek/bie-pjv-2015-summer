@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package control;
+package semaphor.controller;
 
-import view.SemaphorView;
+import semaphor.view.SemaphorView;
 
 /**
  *
@@ -13,8 +13,8 @@ import view.SemaphorView;
  */
 public class Controller {
 
-    private State currentState = RedState.getInstance();
-    SemaphorView sv;
+    private State currentState = RedState.instance;
+    private SemaphorView sv;
 
     public Controller(SemaphorView sv) {
         this.sv = sv;
@@ -22,7 +22,6 @@ public class Controller {
 
     public void next() {
         currentState.leave(this);
-        System.out.println(currentState.getOnColors());
         sv.fireStateChanged(this);
     }
 

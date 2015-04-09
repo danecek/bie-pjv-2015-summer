@@ -3,12 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package view;
+package semaphor.view;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.scene.paint.Color;
-import static javafx.scene.paint.Color.color;
 import javafx.scene.shape.Circle;
 
 /**
@@ -31,7 +30,7 @@ public class OnChangeHandler implements ChangeListener<Boolean> {
         if (newValue) {
             circle.setFill(color);
         } else {
-            circle.setFill(Color.DARKGREY);
+            circle.setFill(Color.DARKSLATEGRAY);
         }
     }
 

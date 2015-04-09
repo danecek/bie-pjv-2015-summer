@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package control;
+package semaphor.controller;
 
-import java.util.Collection;
 import javafx.scene.paint.Color;
 
 /**
@@ -14,16 +13,14 @@ import javafx.scene.paint.Color;
  */
 class YellowFromRed extends State {
 
-    private static YellowFromRed instance;
+    static YellowFromRed instance = new YellowFromRed();
 
     public YellowFromRed() {
-        super(GreenState.getInstance(), Color.RED, Color.YELLOW);
+        super(Color.RED, Color.YELLOW);
     }
 
-    public static YellowFromRed getInstance() {
-        if (instance == null) {
-            instance = new YellowFromRed();
-        }
-        return instance;
+    @Override
+    public State getNextState() {
+        return GreenState.instance;
     }
 }
