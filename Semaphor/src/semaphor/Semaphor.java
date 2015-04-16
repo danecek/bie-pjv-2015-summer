@@ -12,7 +12,6 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -23,29 +22,39 @@ import semaphor.view.SemaphorView;
  * @author danecek
  */
 public class Semaphor extends Application {
-    
+
     @Override
     public void start(Stage primaryStage) {
-        Button btn = new Button();
-        
+        Button next = new Button("Next");
+
         VBox root = new VBox();
         root.setPadding(new Insets(10));
         root.setSpacing(20);
         SemaphorView sv = new SemaphorView(20, Color.RED, Color.YELLOW, Color.GREEN);
         Controller c = new Controller(sv);
-        btn.setText("Next");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
+        next.setOnAction(new EventHandler<ActionEvent>() {
+
             @Override
             public void handle(ActionEvent event) {
                 c.next();
             }
         });
 
-        root.getChildren().addAll(sv, btn);
-        
+        root.getChildren().addAll(sv, next);
+
+        SemaphoreThread st = new SemaphoreThread(c);
+        st.start();
+        Button stop = new Button("Stop");
+        stop.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+                st.myStop();
+            }
+        });
+        root.getChildren().add(stop);
         Scene scene = new Scene(root);
-        
+
         primaryStage.setTitle("Semaphor");
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -57,5 +66,5 @@ public class Semaphor extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }
