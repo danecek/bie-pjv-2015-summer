@@ -42,3 +42,15 @@ hs_err_pid*
 /Semaphor/nbproject/private/
 /Semaphor/build/
 /Semaphor/dist/
+/CustomersWSClient/nbproject/private/
+/CustomersWSClient/dist/
+/CustomersWSClient/build/
+/JaxbHW/nbproject/private/
+/JaxbHW/build/
+/JavaApplication12/nbproject/private/
+/JavaFXClient/nbproject/private/
+/JavaFXClient/build/
+/UDPDataServer/nbproject/private/
+/UDPDataServer/build/
+/JavaFXClient/dist/
+/UDPDataServer/dist/
