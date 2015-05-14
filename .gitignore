@@ -52,3 +52,6 @@
 /UDPDataServer/build/
 /JavaFXClient/dist/
 /UDPDataServer/dist/
+/JDBC/nbproject/private/
+/JDBC/build/
+/JDBC/dist/
