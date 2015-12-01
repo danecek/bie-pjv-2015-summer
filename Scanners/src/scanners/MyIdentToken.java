@@ -5,10 +5,6 @@
  */
 package scanners;
 
-/**
- *
- * @author danecek
- */
 public class MyIdentToken extends MyToken {
 
     String id;
