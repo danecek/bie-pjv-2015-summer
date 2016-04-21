@@ -23,6 +23,7 @@ public class JDBC {
 
     /**
      * @param args the command line arguments
+     * @throws java.sql.SQLException
      */
     public static void main(String[] args) throws SQLException {
         EmbeddedDataSource40 ds = new EmbeddedDataSource40();
